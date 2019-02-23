@@ -25,7 +25,7 @@ cv.destroyAllWindows()
 def face_detect_demo(image):   # 视频识别部分
     gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
     face_detector = cv.CascadeClassifier("/Users/jkx/PycharmProjects/awesome_web/venv/lib/python3.6/site-packages/cv2/data/haarcascade_frontalface_default.xml")
-    faces = face_detector.detectMultiScale(gray, 1.02, 50)   # 最后一个数字越小，越容易误判，越大，越容易不判
+    faces = face_detector.detectMultiScale(gray, 1.1, 50)   # 最后一个数字越小，越容易误判，越大，越容易不判
     for x, y, w, h in faces:
         cv.rectangle(image, (x, y), (x+w, y+h), (0, 0, 255), 1)
     cv.imshow("result", image)
