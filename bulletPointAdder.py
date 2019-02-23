@@ -21,3 +21,6 @@ mm = pyperclip.paste()
 
 
 print(mm)
+
+ss = "He word"[0]
+print(ss)
